@@ -18,5 +18,5 @@ def read_root():
 def read_item(api_key: str, q: Union[str, None] = None):
     if not api.is_valid(api_key):
         return {"status":"error", "info":"Invalid key"}
-    return model_chatglm.chat(q)
+    return model_chatglm.chat(text, )
     
