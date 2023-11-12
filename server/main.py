@@ -21,7 +21,7 @@ def read_root(token: str, key: str):
     if token != "token":
         return {"status":"error", "info":"Invalid token"}
     api.add_key(key)
-    return return {"status":"success", "info":"Invalid key"}
+    return {"status":"success", "info":"Invalid key"}
 
 @app.get("/api/{api_key}")
 def read_item(api_key: str, q: Union[query, None] = None):
