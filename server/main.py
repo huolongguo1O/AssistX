@@ -10,6 +10,7 @@ class query(BaseModel):
     text: str
     _type: int # 0 for chat and 1 for observation
     history: str
+    
 @app.get("/")
 def read_root():
     return {"Hello": "World"}
