@@ -1,2 +1,2 @@
-def generate_answer(text):
+def chat(text):
     pass
