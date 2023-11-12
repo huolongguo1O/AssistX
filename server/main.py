@@ -11,6 +11,6 @@ def read_root():
     return {"Hello": "World"}
 
 
-@app.get("/api/{item_id}")
+@app.get("/api/{api_key}")
 def read_item(item_id: int, q: Union[str, None] = None):
     return {"item_id": item_id, "q": q}
