@@ -15,5 +15,6 @@ clear_command = 'cls' if os_name == 'Windows' else 'clear'
 stop_stream = False
 
 welcome_prompt = "欢迎使用 ChatGLM3-6B 模型，输入内容即可进行对话，clear 清空对话历史，stop 终止程序"
+
 def chat(text):
     pass
