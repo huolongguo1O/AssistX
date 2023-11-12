@@ -52,7 +52,7 @@ tools = [
 ]
 system_info = {"role": "system", "content": "Answer the following questions as best as you can. You have access to the following tools:", "tools": tools}
 
-def chat(text):
+def chat(text, history):
     history = [system_info]
     query = text
     response, history = model.chat(tokenizer, query, history=history)
