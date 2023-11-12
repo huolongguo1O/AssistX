@@ -8,7 +8,7 @@ app = FastAPI()
 
 class query(BaseModel):
     text: str
-    type: int #
+    _type: int #
     history: str
 @app.get("/")
 def read_root():
@@ -18,5 +18,5 @@ def read_root():
 def read_item(api_key: str, q: Union[str, None] = None):
     if not api.is_valid(api_key):
         return {"status":"error", "info":"Invalid key"}
-    return model_chatglm.chat(text, type, history)
+    return model_chatglm.chat(text, _type, history)
     
