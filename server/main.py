@@ -8,7 +8,7 @@ app = FastAPI()
 
 class query(BaseModel):
     text: str
-    _type: int # 0 for 
+    _type: int # 0 for chat and 1 for 
     history: str
 @app.get("/")
 def read_root():
