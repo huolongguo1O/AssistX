@@ -9,6 +9,7 @@ app = FastAPI()
 class query(BaseModel):
     text: str
     type: int #
+    
 @app.get("/")
 def read_root():
     return {"Hello": "World"}
