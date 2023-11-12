@@ -20,7 +20,7 @@ def read_root():
 def read_root(token: str, key: str):
     if token != "token":
         return {"status":"error", "info":"Invalid token"}
-    
+    api.add_key(key)
     return "AssistX API!"
 
 @app.get("/api/{api_key}")
