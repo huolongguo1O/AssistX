@@ -57,4 +57,5 @@ def chat(text, _type, history):
     query = text
     if _type == 0:
         response, history = model.chat(tokenizer, query, history=history)
+    if _type == 1: 
     return response, history
