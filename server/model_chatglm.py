@@ -1,1 +1,1 @@
-def generate
+def generate_answer()
