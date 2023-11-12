@@ -15,6 +15,9 @@ class query(BaseModel):
 @app.get("/")
 def read_root():
     return "AssistX API!"
+@app.get("/")
+def read_root():
+    return "AssistX API!"
 
 @app.get("/api/{api_key}")
 def read_item(api_key: str, q: Union[query, None] = None):
