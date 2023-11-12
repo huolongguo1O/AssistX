@@ -19,5 +19,5 @@ def read_item(api_key: str, q: Union[query, None] = None):
     if not api.is_valid(api_key):
         return {"status":"error", "info":"Invalid key"}
     response, history = model_chatglm.chat(q.text, q._type, q.history)
-    return {"response":response, }
+    return {"response":response, "history":history}
     
