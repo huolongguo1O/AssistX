@@ -16,5 +16,41 @@ stop_stream = False
 
 welcome_prompt = "欢迎使用 ChatGLM3-6B 模型，输入内容即可进行对话，clear 清空对话历史，stop 终止程序"
 
+tools = [
+    {
+        "name": "track",
+        "description": "追踪指定股票的实时价格",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "symbol": {
+                    "description": "需要追踪的股票代码"
+                }
+            },
+            "required": ['symbol']
+        }
+    },
+    {
+        "name": "text-to-speech",
+        "description": "将文本转换为语音",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "text": {
+                    "description": "需要转换成语音的文本"
+                },
+                "voice": {
+                    "description": "要使用的语音类型（男声、女声等）"
+                },
+                "speed": {
+                    "description": "语音的速度（快、中等、慢等）"
+                }
+            },
+            "required": ['text']
+        }
+    }
+]
+system_info = {"role": "system", "content": "Answer the following questions as best as you can. You have access to the following tools:", "tools": tools}
+v
 def chat(text):
     pass
