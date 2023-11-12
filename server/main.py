@@ -1,1 +1,1 @@
-fri
+from flask import Flask
