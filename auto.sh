@@ -1,0 +1,1 @@
+while [[ 1 ]]; do git add .; git commit -m "commit" ; sleep 3; done
