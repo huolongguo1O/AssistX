@@ -53,4 +53,7 @@ tools = [
 system_info = {"role": "system", "content": "Answer the following questions as best as you can. You have access to the following tools:", "tools": tools}
 
 def chat(text):
-    pass
+    history = [system_info]
+query = "帮我查询股票10111的价格"
+response, history = model.chat(tokenizer, query, history=history)
+print(response)
