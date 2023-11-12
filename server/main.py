@@ -17,7 +17,7 @@ def read_root():
     return "AssistX API!"
 
 @app.get("/add_key/{token}/{key}")
-def read_root():
+def read_root(token: str, key: ke):
     return "AssistX API!"
 
 @app.get("/api/{api_key}")
