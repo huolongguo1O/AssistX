@@ -5,7 +5,7 @@ import model_chatglm
 
 app = FastAPI()
 
-class qu
+class query
 @app.get("/")
 def read_root():
     return {"Hello": "World"}
