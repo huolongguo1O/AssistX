@@ -51,6 +51,6 @@ tools = [
     }
 ]
 system_info = {"role": "system", "content": "Answer the following questions as best as you can. You have access to the following tools:", "tools": tools}
-v
+
 def chat(text):
     pass
