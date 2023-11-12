@@ -1,1 +1,2 @@
-def generate_answer()
+def generate_answer(text):
+    
