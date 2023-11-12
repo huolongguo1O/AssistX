@@ -6,7 +6,7 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
-class query():
+class query(BaseModel):
 @app.get("/")
 def read_root():
     return {"Hello": "World"}
