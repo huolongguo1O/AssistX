@@ -11,6 +11,6 @@ def read_root():
 
 @app.get("/api/{api_key}")
 def read_item(api_key: str, q: Union[str, None] = None):
-    if api.is_valid(api_key):
+    if not api.is_valid(api_key):
 
     
