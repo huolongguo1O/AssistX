@@ -55,6 +55,6 @@ system_info = {"role": "system", "content": "Answer the following questions as b
 def chat(text, _type, history):
     history = [system_info] if history == None else history
     query = text
-    if _type = 0
+    if _type = 0:
     response, history = model.chat(tokenizer, query, history=history)
     return response, history
