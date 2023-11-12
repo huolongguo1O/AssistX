@@ -15,6 +15,7 @@ class query(BaseModel):
 @app.get("/")
 def read_root():
     return "AssistX API!"
+    
 @app.get("/")
 def read_root():
     return "AssistX API!"
