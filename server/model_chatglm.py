@@ -54,6 +54,6 @@ system_info = {"role": "system", "content": "Answer the following questions as b
 
 def chat(text):
     history = [system_info]
-    query = "帮我查询股票10111的价格"
+    query = text
     response, history = model.chat(tokenizer, query, history=history)
     return response, history
