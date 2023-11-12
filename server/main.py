@@ -1,2 +1,1 @@
-import transformers
-import torch
+fri
