@@ -12,5 +12,5 @@ def read_root():
 
 
 @app.get("/api/{api_key}")
-def read_item(item_id: int, q: Union[str, None] = None):
+def read_item(item_id: str, q: Union[str, None] = None):
     return {"item_id": item_id, "q": q}
