@@ -1,1 +1,1 @@
-def is_
+def is_valid()
