@@ -1,8 +1,8 @@
-
 from typing import Union
 from fastapi import FastAPI
 import api
 import model_chatglm
+
 app = FastAPI()
 
 
