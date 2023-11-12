@@ -14,7 +14,7 @@ class query(BaseModel):
 
 @app.get("/")
 def read_root():
-    return ""{"Hello": "World"}""
+    return ""
 
 @app.get("/api/{api_key}")
 def read_item(api_key: str, q: Union[query, None] = None):
