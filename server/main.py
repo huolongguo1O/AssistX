@@ -14,7 +14,7 @@ class query(BaseModel):
 
 @app.get("/")
 def read_root():
-    return "AssistX API!\n"
+    return "AssistX API!\nqing'q"
 
 @app.get("/add_key/{token}/{key}")
 def read_root(token: str, key: str):
