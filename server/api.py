@@ -6,4 +6,8 @@ def is_valid(key):
     return False
 
 def add_key(key):
-    
+    if is_valid(key):
+        return False
+    api_list.append({"key": key, "count": 0})
+    json.dump(api_list, open("api_list.json", "w"))
+    return True
