@@ -5,3 +5,4 @@ def is_valid(key):
             return True
     return False
 
+def add_key()
