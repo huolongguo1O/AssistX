@@ -20,4 +20,4 @@ class query(BaseModel):
         # if t is a Dict, Lets call tools
         while type(t)==dict:
             if t.get("name") == "code-exec":
-                tools.code_exec.main(t.get())
+                tools.code_exec.main(t.get("code"))
