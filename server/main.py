@@ -9,7 +9,7 @@ app = FastAPI()
 
 class query(BaseModel):
     text: str
-    _type: int # 0 for chat and 1 for observation
+    t: int # 0 for chat and 1 for observation
     history: str
 
 @app.get("/")
@@ -24,10 +24,10 @@ def read_root(token: str, key: str):
     api.add_key(key)
     return {"status":"success"}
 
-@app.get("/api/{api_key}")
+@app.post("/api/{api_key}")
 def core(api_key: str, q: Union[query, None] = None):
     if not api.is_valid(api_key):
         return {"status":"error", "info":"Invalid key"}
-    response, history = model_chatglm.chat(q.text, q._type, q.history)
+    response, history = model_chatglm.chat(q.text, q.t, q.history)
     return {"status":"success", "response":response, "history":json.dumps(history)}
     
