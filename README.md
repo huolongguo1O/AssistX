@@ -12,7 +12,7 @@
 ### 服务端
 ```
 pip install -r requirements.txt
-python3 main.py
+uvicorn main.py
 ```
 
 ## TODO 
