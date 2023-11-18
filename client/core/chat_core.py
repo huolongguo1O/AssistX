@@ -27,5 +27,6 @@ class query(BaseModel):
                     data = {"text": result, "_type": 1, "history": history}
                 )
                 res = json.loads(r.text)
-                
+                t = res["response"]
+                h
 
