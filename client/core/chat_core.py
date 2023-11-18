@@ -32,7 +32,7 @@ class query(BaseModel):
             else:
                 r = requests.post(
                     load_config.api()+load_config.key(),
-                    data = {"text": result, "_type": 1, "history": history}
+                    data = {"text": "U", "_type": 1, "history": history}
                 )
                 res = json.loads(r.text)
                 t = res["response"]
