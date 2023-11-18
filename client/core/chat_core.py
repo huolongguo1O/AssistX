@@ -37,5 +37,5 @@ class query(BaseModel):
                 res = json.loads(r.text)
                 t = res["response"]
                 history = res["history"]
-        
+        return t
 
