@@ -1,5 +1,5 @@
 def api():
-    return "http:/"
+    return "http://127.0.0.1:8000/api/"
 
 def key():
     return ""
