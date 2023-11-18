@@ -13,4 +13,4 @@ class query(BaseModel):
         load_config.api()+load_config.key(),
         data = {"text": msg, "_type": 0, "history": history}
     )
-    res = js
+    res = json.loads(r.text)
