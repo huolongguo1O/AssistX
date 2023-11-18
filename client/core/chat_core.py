@@ -9,7 +9,7 @@ class query(BaseModel):
     _type: int # 0 for chat and 1 for observation
     history: str
     '''
-    requests.posts(
+    requests.post(
         load_config.api()+load_config.key()
-    
+
     )
