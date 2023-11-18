@@ -3,8 +3,7 @@ import core.chat_core
 import gradio as gr
 
 
-def greet(name):
-    return "Hello " + name + "!"
+def speech
 
 
 with gr.Blocks() as demo:
