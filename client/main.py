@@ -3,7 +3,7 @@ import core.chat_core
 import gradio as gr
 
 
-def speechr(msg,):
+def speechr(msg, ):
 
 
 with gr.Blocks() as demo:
