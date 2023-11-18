@@ -9,7 +9,8 @@ class query(BaseModel):
     _type: int # 0 for chat and 1 for observation
     history: str
     '''
-    r =requests.post(
+    r = requests.post(
         load_config.api()+load_config.key(),
         data = {"text": msg, "_type": 0, "history": history}
     )
+    
