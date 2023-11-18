@@ -38,6 +38,6 @@ class query(BaseModel):
                 )
                 res = json.loads(r.text)
                 t = res["response"]
-                history = res["history"]
+                history = json.dumps(res["history"])
         return t
 
