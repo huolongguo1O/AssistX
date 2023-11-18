@@ -30,6 +30,7 @@ class query(BaseModel):
                     data = {"text": result, "_type": 1, "history": history}
                 )
                 res = json.loads(r.text)
+                print(r)
                 t = res["response"]
                 history = json.dumps(res["history"])
             else:
