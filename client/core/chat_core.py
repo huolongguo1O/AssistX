@@ -15,4 +15,4 @@ class query(BaseModel):
     )
     res = json.loads(r.text)
     if res["status"]=="success":
-        t = res[]
+        t = res["e"]
