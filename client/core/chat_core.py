@@ -30,7 +30,7 @@ class query(BaseModel):
                 )
                 res = json.loads(r.text)
                 t = res["response"]
-                history = json.dumps(res["history"]
+                history = json.dumps(res["history"])
             else:
                 r = requests.post(
                     load_config.api()+load_config.key(),
