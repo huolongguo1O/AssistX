@@ -23,7 +23,7 @@ class query(BaseModel):
             if t.get("name") == "code-exec":
                 tools.code_exec.main(t.get("code"))
                 r = requests.post(
-        load_config.api()+load_config.key(),
-        data = {"text": msg, "_type": 0, "history": history}
-    )
+                    load_config.api()+load_config.key(),
+                    data = {"text": msg, "_type": 0, "history": history}
+            )
 
