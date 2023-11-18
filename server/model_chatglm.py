@@ -39,12 +39,6 @@ tools = [
                 "text": {
                     "description": "需要转换成语音的文本"
                 },
-                "voice": {
-                    "description": "要使用的语音类型（男声、女声等）"
-                },
-                "speed": {
-                    "description": "语音的速度（快、中等、慢等）"
-                }
             },
             "required": ['text']
         }
