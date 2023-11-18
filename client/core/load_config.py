@@ -1,5 +1,5 @@
 def api():
-    return ""
+    return "http:/"
 
 def key():
     return ""
