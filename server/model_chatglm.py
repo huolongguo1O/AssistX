@@ -32,7 +32,7 @@ tools = [
     },
     {
         "name": "code-exec",
-        "description": "执行所给python代码",
+        "description": "执行所给python代码（）",
         "parameters": {
             "type": "object",
             "properties": {
