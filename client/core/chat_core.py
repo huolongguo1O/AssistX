@@ -10,6 +10,6 @@ class query(BaseModel):
     history: str
     '''
     requests.post(
-        load_config.api()+load_config.key()
+        load_config.api()+load_config.key(),
         data = {"text": msg, "history": history}
     )
