@@ -32,7 +32,7 @@ tools = [
     },
     {
         "name": "code-exec",
-        "description": "将文本转换为语音",
+        "description": "执行所给代码",
         "parameters": {
             "type": "object",
             "properties": {
