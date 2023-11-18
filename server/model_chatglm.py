@@ -31,7 +31,7 @@ tools = [
         }
     },
     {
-        "name": "text-to-speech",
+        "name": "code-exec",
         "description": "将文本转换为语音",
         "parameters": {
             "type": "object",
