@@ -10,5 +10,5 @@ def main(code):
         f.write(code)
     r = os.popen("python3 "+filename)
     time.sleep(3)
-    res = r.read()
+    return = r.read()
     return res
