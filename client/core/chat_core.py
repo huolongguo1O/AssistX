@@ -16,4 +16,5 @@ class query(BaseModel):
     res = json.loads(r.text)
     if res["status"]=="success":
         t = res["response"]
-        # 
+        # if t is a Dict, Lets call tools
+        
