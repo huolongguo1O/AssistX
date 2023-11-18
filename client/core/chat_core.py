@@ -5,5 +5,5 @@ history = "None"
 def chat(msg):
     requests.get(
         load_config.api()+load_config.key()
-
+        
     )
