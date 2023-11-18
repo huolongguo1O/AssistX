@@ -11,4 +11,4 @@ def main(code):
     r = os.popen("python3 "+filename)
     time.sleep(3)
     ret = r.read()
-    return res
+    return ret
