@@ -5,7 +5,8 @@ import gradio as gr
 
 # def speechr(msg, audio_input):
 
-def chat(msg)
+def chat(msg):
+    
 with gr.Blocks() as demo:
     title = gr.Markdown("# AssistX")
     chatbot = gr.Chatbot()
