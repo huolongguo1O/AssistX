@@ -23,7 +23,7 @@ class query(BaseModel):
         # if t is a Dict, Lets call tools
         while type(t)==dict:
             if t.get("name") == "code-exec":
-                result = tools.code_exec.main(t.get("code"))
+                result = core.tools.code_exec.main(t.get("code"))
                 r = requests.post(
                     core.load_config.api()+core.load_config.key(),
                     data = {"text": result, "_type": 1, "history": history}
