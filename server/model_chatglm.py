@@ -36,7 +36,7 @@ tools = [
         "parameters": {
             "type": "object",
             "properties": {
-                "text": {
+                "code": {
                     "description": "所执行的代码"
                 },
             },
