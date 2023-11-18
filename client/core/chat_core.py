@@ -14,3 +14,4 @@ class query(BaseModel):
         data = {"text": msg, "_type": 0, "history": history}
     )
     res = json.loads(r.text)
+    
