@@ -1,6 +1,7 @@
 import requests
 import json
 import load_config
+import tools.
 history = "None"
 def chat(msg):
     '''
