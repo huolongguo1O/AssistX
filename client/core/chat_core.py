@@ -25,7 +25,7 @@ class query(BaseModel):
             if t.get("name") == "code-exec":
                 result = tools.code_exec.main(t.get("code"))
                 r = requests.post(
-                    load_config.api()+load_config.key(),
+                    core.load_config.api()+core.load_config.key(),
                     data = {"text": result, "_type": 1, "history": history}
                 )
                 res = json.loads(r.text)
