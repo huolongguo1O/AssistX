@@ -3,4 +3,6 @@ import json
 import load_config
 history = "None"
 def chat(msg):
-    requests.get(load_config.api()+load_config.key())
+    requests.get(
+        load_config.api()+load_config.key()
+                 )
