@@ -1,4 +1,4 @@
 import requests
 import json
 history = None
-def chat()
+def chat(msg):
