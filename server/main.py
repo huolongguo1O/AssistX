@@ -25,7 +25,7 @@ def read_root(token: str, key: str):
     return {"status":"success"}
 
 @app.get("/api/{api_key}")
-def read_item(api_key: str, q: Union[query, None] = None):
+def core(api_key: str, q: Union[query, None] = None):
     if not api.is_valid(api_key):
         return {"status":"error", "info":"Invalid key"}
     response, history = model_chatglm.chat(q.text, q._type, q.history)
