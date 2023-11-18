@@ -30,4 +30,5 @@ class query(BaseModel):
                 t = res["response"]
                 history = res["history"]
             else:
+                
 
