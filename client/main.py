@@ -9,5 +9,6 @@ def greet(name):
 
 with gr.Blocks() as demo:
     title = gr.Markdown("# AssistX")
+    chatbot = gr.Chatbot
 
 demo.launch()
