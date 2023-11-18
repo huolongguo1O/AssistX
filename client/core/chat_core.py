@@ -37,7 +37,7 @@ class query(BaseModel):
             else:
                 r = requests.post(
                     core.load_config.api()+core.load_config.key(),
-                    data = {"text": "Unknown tool.", "_type": 1, "history": history}
+                    data = json.dumps({"text": "Unknown tool.", "_type": 1, "history": history}
                 )
                 res = json.loads(r.text)
                 t = res["response"]
