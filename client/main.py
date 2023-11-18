@@ -7,7 +7,7 @@ import gradio as gr
 
 def chat(msg,chatbot):
     response = core.chat_core.chat(msg)
-    return [(msg,'1')]
+    return [(msg,response)]
 with gr.Blocks() as demo:
     title = gr.Markdown("# AssistX")
     chatbot = gr.Chatbot()
