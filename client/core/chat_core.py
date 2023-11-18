@@ -11,5 +11,5 @@ class query(BaseModel):
     '''
     requests.get(
         load_config.api()+load_config.key()
-
+        
     )
