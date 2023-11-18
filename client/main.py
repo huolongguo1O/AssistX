@@ -12,6 +12,6 @@ with gr.Blocks() as demo:
     chatbot = gr.Chatbot()
     msg = gr.Textbox()
     audio_input = gr.Audio(type="filepath")
-    audio_input.stop_recording(fn, inputs = )
+    audio_input.stop_recording(fn, inputs = [msg, audio_input])
 
 demo.launch()
