@@ -15,10 +15,10 @@ class query(BaseModel):
         data = {"text": msg, "_type": 0, "history": history}
     )
     res = json.loads(r.text)
+    
     if res["status"]=="success":
         t = res["response"]
         # if t is a Dict, Lets call tools
         while type(t)==dict:
             if t.get("name") == "code-exec":
                 tools.code_exec.main(t.get("code"))
-                
