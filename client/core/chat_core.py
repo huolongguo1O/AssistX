@@ -28,7 +28,7 @@ class query(BaseModel):
                 result = core.tools.code_exec.main(t.get("code"))
                 r = requests.post(
                     core.load_config.api()+core.load_config.key(),
-                    data = {"text": result, "_type": 1, "history": history}
+                    data = json.dumps({"text": result, "_type": 1, "history": history}
                 )
                 res = json.loads(r.text)
                 print(r.text)
