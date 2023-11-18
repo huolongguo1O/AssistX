@@ -6,6 +6,7 @@ import core.tools.code_exec
 history = "None"
 
 def chat(msg):
+    global history
     '''
 class query(BaseModel):
     text: str
