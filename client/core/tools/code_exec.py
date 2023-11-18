@@ -8,4 +8,4 @@ def main(code):
     with open(filename, 'w') as f:
         f.write(code)
     r = os.popen("python3 "+filename)
-    res = 
+    res = r.read()
