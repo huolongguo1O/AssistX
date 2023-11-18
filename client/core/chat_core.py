@@ -19,4 +19,5 @@ class query(BaseModel):
         t = res["response"]
         # if t is a Dict, Lets call tools
         if type(t)==dict:
-            if t.get("name") == ""
+            if t.get("name") == "code-exec":
+                
