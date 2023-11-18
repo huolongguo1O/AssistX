@@ -11,5 +11,5 @@ class query(BaseModel):
     '''
     requests.post(
         load_config.api()+load_config.key(),
-        data = {"text": msg, "type"history": history}
+        data = {"text": msg, "type":0, history": history}
     )
