@@ -6,4 +6,4 @@ def main(code):
     filename = '/tmp/' + ''.join(random.sample('abcdefghijklmnopqrstuvwxyz', 10))
     with open(filename, 'w') as f:
         f.write(code)
-    os.popen("python3 ")
+    os.popen("python3 "+filename)
