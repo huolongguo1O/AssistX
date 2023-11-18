@@ -1,5 +1,6 @@
 import os
 import random
+import time
 def main(code):
     '''
     save the code to a random file, and execute
