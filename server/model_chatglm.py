@@ -39,7 +39,7 @@ def chat(text, _type, history):
     query = text
     if _type == 0:
         response, history = model.chat(tokenizer, query, history=history)
-        return response, json.dumps(history
+        return response, json.dumps(history)
     if _type == 1: 
         response, history = model.chat(tokenizer, query, history=history, role = "observation")
         return response, history
