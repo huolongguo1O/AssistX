@@ -22,3 +22,4 @@ class query(BaseModel):
         while type(t)==dict:
             if t.get("name") == "code-exec":
                 tools.code_exec.main(t.get("code"))
+                
