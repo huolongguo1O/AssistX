@@ -8,6 +8,6 @@ def greet(name):
 
 
 with gr.Blocks() as demo:
-    title = gr.
+    title = gr.Markdown()
 
 demo.launch()
