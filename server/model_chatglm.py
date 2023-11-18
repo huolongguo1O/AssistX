@@ -37,7 +37,7 @@ tools = [
             "type": "object",
             "properties": {
                 "text": {
-                    "description": "所执行"
+                    "description": "所执行的代码"
                 },
             },
             "required": ['text']
