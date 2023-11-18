@@ -11,6 +11,6 @@ with gr.Blocks() as demo:
     title = gr.Markdown("# AssistX")
     chatbot = gr.Chatbot()
     msg = gr.Textbox()
-    audio_input = gr.Audio(type=)
+    audio_input = gr.Audio(type="filepath")
 
 demo.launch()
