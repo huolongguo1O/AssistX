@@ -15,7 +15,7 @@ class query(BaseModel):
     '''
     r = requests.post(
         core.load_config.api()+core.load_config.key(),
-        data = {"text": msg, "_type": 0, "history": history}
+        data = json.du{"text": msg, "_type": 0, "history": history}
     )
     print(r.text)
     res = json.loads(r.text)
