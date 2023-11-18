@@ -40,7 +40,7 @@ tools = [
                     "description": "所执行的代码"
                 },
             },
-            "required": ['text']
+            "required": ['code']
         }
     }
 ]
