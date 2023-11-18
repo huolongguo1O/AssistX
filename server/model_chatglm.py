@@ -18,19 +18,6 @@ welcome_prompt = "欢迎使用 ChatGLM3-6B 模型，输入内容即可进行对�
 
 tools = [
     {
-        "name": "track",
-        "description": "追踪指定股票的实时价格",
-        "parameters": {
-            "type": "object",
-            "properties": {
-                "symbol": {
-                    "description": "需要追踪的股票代码"
-                }
-            },
-            "required": ['symbol']
-        }
-    },
-    {
         "name": "code-exec",
         "description": "执行所给python代码（返回stdout）",
         "parameters": {
