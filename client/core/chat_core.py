@@ -28,5 +28,5 @@ class query(BaseModel):
                 )
                 res = json.loads(r.text)
                 t = res["response"]
-                h
+                history = res["history"]
 
