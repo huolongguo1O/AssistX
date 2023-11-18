@@ -26,4 +26,5 @@ class query(BaseModel):
                     load_config.api()+load_config.key(),
                     data = {"text": result, "_type": 1, "history": history}
                 )
+                
 
