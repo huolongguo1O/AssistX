@@ -1,4 +1,4 @@
 def api():
     return ""
 
-def 
+def key()
