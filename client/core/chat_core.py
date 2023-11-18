@@ -1,6 +1,6 @@
 import requests
 import json
-import load_config
+import core.load_config
 import tools.code_exec
 
 history = "None"
