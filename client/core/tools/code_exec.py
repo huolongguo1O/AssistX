@@ -1,2 +1,2 @@
-import math
+import random
 def main(code):
