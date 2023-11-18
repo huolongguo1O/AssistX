@@ -13,7 +13,7 @@ class query(BaseModel):
     history: str
     '''
     r = requests.post(
-        core.load_config.api()+load_config.key(),
+        core.load_config.api()+core.load_config.key(),
         data = {"text": msg, "_type": 0, "history": history}
     )
     res = json.loads(r.text)
