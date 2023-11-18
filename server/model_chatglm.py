@@ -37,7 +37,7 @@ tools = [
             "type": "object",
             "properties": {
                 "text": {
-                    "description": "需要转换成语音的文本"
+                    "description": "所执行"
                 },
             },
             "required": ['text']
