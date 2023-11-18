@@ -2,7 +2,9 @@ import requests
 import json
 import load_config
 import tools.code_exec
+
 history = "None"
+
 def chat(msg):
     '''
 class query(BaseModel):
