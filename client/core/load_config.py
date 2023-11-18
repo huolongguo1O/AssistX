@@ -1,1 +1,2 @@
-def api()
+def api():
+    return ""
