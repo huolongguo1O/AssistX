@@ -24,6 +24,6 @@ class query(BaseModel):
                 result = tools.code_exec.main(t.get("code"))
                 r = requests.post(
                     load_config.api()+load_config.key(),
-                    data = {"text": msg, "_type": 1, "history": history}
+                    data = {"text": result, "_type": 1, "history": history}
                 )
 
