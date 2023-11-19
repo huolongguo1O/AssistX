@@ -20,7 +20,7 @@ welcome_prompt = "欢迎使用 ChatGLM3-6B 模型，输入内容即可进行对�
 tools = [
     {
         "name": "code-exec",
-        "description": "执行所给python代码（返回stdout，限时3s）",
+        "description": "执行所给python代码（返回stdout，限时3s，非必要不）",
         "parameters": {
             "type": "object",
             "properties": {
