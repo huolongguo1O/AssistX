@@ -8,7 +8,7 @@ import json
 app = FastAPI()
 
 class query(BaseModel):
-    text: str
+    text: Union[str, dict]
     t: int # 0 for chat and 1 for observation
     history: str
 
@@ -29,5 +29,4 @@ def core(api_key: str, q: Union[query, None] = None):
     if not api.is_valid(api_key):
         return {"status":"error", "info":"Invalid key"}
     response, history = model_chatglm.chat(q.text, q.t, q.history)
-    return {"status":"success", "response":response, "history":json.dumps(history)}
-    
+    return {"status":"success", "response":response, "history":json.loads(history)}
