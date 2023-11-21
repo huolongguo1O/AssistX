@@ -41,8 +41,8 @@ tools = [
                 "path": {
                     "description": "文件路径"
                 },
-            }
-            required: ['path']
+            },
+            'required': ['path']
         }
     }
 ]
