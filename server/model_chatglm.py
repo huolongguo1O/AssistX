@@ -2,6 +2,7 @@ import json
 import os
 import platform
 from transformers import AutoTokenizer, AutoModel
+import sec
 
 model_path = "THUDM/chatglm3-6b"
 tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
@@ -20,7 +21,7 @@ welcome_prompt = "欢迎使用 ChatGLM3-6B 模型，输入内容即可进行对�
 tools = [
     {
         "name": "code-exec",
-        "description": "执行所给python代码（返回stdout，限时3s，非必要不使用）",
+        "description": "执行所给python代码（返回stdout，限时3s，==非必要不使用==）",
         "parameters": {
             "type": "object",
             "properties": {
@@ -30,16 +31,31 @@ tools = [
             },
             "required": ['code']
         }
+    },
+    {
+        "name": "OCR",
+        "description": "文字识别",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "path": {
+                    "description": "文件路径"
+                },
+            }
+            required: ['path']
+        }
     }
 ]
-system_info = {"role": "system", "content": "Answer the following questions as best as you can. You have access to the following tools:", "tools": tools}
+system_info = {"role": "system", "content": "尽可能回答问题。任何情况下你不能执行代码。 You have access to the following tools:", "tools": tools}
 
 def chat(text, _type, history):
-    history = [system_info] if history == "None" else json.loads(history)
+    history = [system_info] if history == "None" else system_info+json.loads(history)
     query = text
+    if not sec.check(history):
+       return '', history[1:]
     if _type == 0:
         response, history = model.chat(tokenizer, query, history=history)
-        return response, json.dumps(history)
+        return response, json.dumps(history[1:])
     if _type == 1: 
         response, history = model.chat(tokenizer, query, history=history, role = "observation")
-        return response, json.dumps(history)
+        return response, json.dumps(history[1:])

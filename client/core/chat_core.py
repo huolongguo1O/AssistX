@@ -34,6 +34,16 @@ class query(BaseModel):
                 print(r.text)
                 t = res["response"]
                 history = json.dumps(res["history"])
+            if t.get("name") == "OCR":
+                result = core.tools.ocr.main(t["parameters"].get("path"))
+                r = requests.post(
+                    core.load_config.api()+core.load_config.key(),
+                    data = json.dumps({"text": json.dumps({"output": result}, ensure_ascii=False), "t": 1, "history": history})
+                )
+                res = json.loads(r.text)
+                print(r.text)
+                t = res["response"]
+                history = json.dumps(res["history"])
             else:
                 r = requests.post(
                     core.load_config.api()+core.load_config.key(),
